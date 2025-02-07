@@ -1,0 +1,8 @@
+torch
+scikit-learn
+pandas
+faker
+flask
+pytest
+fuzzywuzzy
+python-Levenshtein

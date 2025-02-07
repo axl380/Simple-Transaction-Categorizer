@@ -1,0 +1,221 @@
+/* styles.css */
+
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; 
+}
+
+.container {
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;  /* Increase max-width for more space */
+    overflow-x: auto;  /* Enable horizontal scrolling if needed */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e9f7ef;
+    border: 1px solid #28a745;
+    color: #155724;
+    border-radius: 8px;
+    display: none;
+}
+
+/* Transaction Table Styling */
+#transactionsTable {
+    width: 100%; 
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;  
+    table-layout: auto; 
+}
+
+#transactionsTable th, #transactionsTable td {
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;  
+    max-width: 150px;
+}
+
+#transactionsTable th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#transactionsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+#transactionsTable tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+    #transactionsTable th, #transactionsTable td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Buttons for Export and Reset */
+#exportCSV, #resetBtn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+#exportCSV:hover, #resetBtn:hover {
+    background-color: #218838;
+}
+
+#resetBtn {
+    background-color: #dc3545;
+}
+
+#resetBtn:hover {
+    background-color: #c82333;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #181a1b;
+    color: #d1d5db;
+}
+
+body.dark-mode .container {
+    background-color: #1f2123;
+    color: #d1d5db;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #2a2c2e;
+    color: #e0e0e0;
+    border: 1px solid #444444;
+}
+
+body.dark-mode input[type="text"]:focus {
+    border-color: #6c8cff;
+    box-shadow: 0 0 5px rgba(108, 140, 255, 0.8);
+}
+
+body.dark-mode button {
+    background-color: #6c8cff;  /* Muted blue */
+    color: #e0e0e0;
+}
+
+body.dark-mode button:hover {
+    background-color: #4a6fae;
+}
+
+body.dark-mode #transactionsTable {
+    background-color: #2a2a2a;
+    color: #d1d5db;
+    border: 1px solid #444;
+}
+
+body.dark-mode #transactionsTable th {
+    background-color: #4a6fae;
+    color: #e0e0e0;
+}
+
+body.dark-mode #transactionsTable tr:nth-child(even) {
+    background-color: #242526;
+}
+
+body.dark-mode #transactionsTable tr:hover {
+    background-color: #3a3b3c;
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 28px;
+    color: #007bff;
+}
+
+#darkModeToggle:hover {
+    transform: scale(1.2);
+    color: #4a6fae;
+}
+
+body.dark-mode #darkModeToggle {
+    color: #ffcc00;
+}

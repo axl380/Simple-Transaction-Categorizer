@@ -1,0 +1,21 @@
+# Ignore virtual environments
+.venv/
+.pytest_cache/
+
+# Ignore original 0.1.0 release source files.
+.src/*
+
+# Ignore datasets and model files
+.data/*
+.model/*
+
+# Ignore Flask instance folder
+.instance/
+
+# Ignore IDE configs
+.vscode/
+__pycache__/
+
+# Ignore build files
+release/*
+*.pyc

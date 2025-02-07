@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Transaction Categorizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Transaction Categorizer</h1>
+
+        <!-- Dark Mode -->
+        <button id="darkModeToggle">
+            <span class="material-icons">dark_mode</span>
+        </button>
+
+        <form id="transactionForm">
+            <input type="text" name="merchant" placeholder="Enter Transaction Description" required>
+            <input type="text" name="amount" placeholder="Enter Transaction Amount" required>
+            <input type="text" name="notes" placeholder="Optional Notes"> 
+            <button type="submit">Categorize</button>
+        </form>
+
+        <div id="result" style="display: none;"></div>
+
+        <h2>Transaction History</h2>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Timestamp</th>
+                    <th>Merchant</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Confidence (%)</th> 
+                    <th>Notes</th>  
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <button id="exportCSV">Export to CSV</button>
+        <button id="resetBtn" onclick="location.reload()">Reset</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
