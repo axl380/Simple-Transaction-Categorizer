@@ -65,9 +65,10 @@ document.getElementById('exportCSV').addEventListener('click', function () {
     const csv = Array.from(rows).map(row =>
         Array.from(row.cells).map((cell, index) => {
             if (index === 1) {  // Timestamp column
-                return `"${cell.getAttribute('data-iso')}"`;  // Use ISO timestamp for CSV
-            } else
-            if (index === 3) {  // Amount column
+                const isoTimestamp = cell.getAttribute('data-iso');
+                return `"${isoTimestamp || cell.textContent}"`;  // Use ISO timestamp for CSV
+            } 
+            else if (index === 3) {  // Amount column
                 return `"${cell.textContent.replace('$', '')}"`;  // Remove $ for CSV
             }
             return `"${cell.textContent}"`;
