@@ -134,13 +134,18 @@ pip install -r requirements.txt
 ### V1.0.0 (February 4, 2025):
 - Flask app with fuzzy matching, custom dataset, improved model accuracy, and CSV export.
 
-## Roadmap
-### V2.0.0 (mid-February 2025):
-- Transition the program to use a database instead of a CSV file.
-- Enhanced querying and faster merchant lookups.
+### V1.0.1 (February 15, 2025):
+- Resolved a CSV export issue where the `Timestamp` column appeared as `null`.
+- After assessing the project's purpose, I decided to pivot to a higher-value initiative.
+- This app remains fully functional.
 
-### V3.0.0 (March 2025):
-- Incremental learning to allow model to improve with new transaction data over time.
+## ~~Roadmap~~
+### ~~V2.0.0 (mid-February 2025):~~
+- ~~Transition the program to use a database instead of a CSV file.~~
+- ~~Enhanced querying and faster merchant lookups.~~
+
+### ~~V3.0.0 (March 2025):~~
+- ~~Incremental learning to allow model to improve with new transaction data over time.~~
 
 ## License
 This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
